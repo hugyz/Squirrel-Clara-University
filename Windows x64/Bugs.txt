@@ -9,7 +9,11 @@ Text Popup Overlap
 Powerup Overlap
 
 
-Close button for scdi doesn't work
+Close button for the following buildings -- popups for these have been disabled
+	SCDI
+	Leavey Center
+	Campisi
+	Observatory
 
 
 

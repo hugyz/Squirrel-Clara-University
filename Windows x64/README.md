@@ -1,17 +1,19 @@
-# Squirrel Clara MVP
+# Squirrel Clara University -- Ally, Joseph, Luke, Hugo
 
-This is the minimum viable product (MVP) build for our Unity game.
+A Unity game built for CSEN 174.
 
 ## 🛠 GitHub Source
 
-All source code and scenes are in this repository.
+All source code and scenes are located in this repository.
 
-## 🎮 MVP Build Download
+To run the game, download the build from the link below.
 
-The final working game build is hosted here:
+## 🎮 Download
 
-➡️ [Download MVP Build](https://drive.google.com/file/d/1MJ1LSOS_5-gmnvbUtT76Ypt3cyesS4DO/view?usp=sharing)
+Build is hosted here:
 
-Includes:
-- Executable
-- Assets (`.resS`)
+➡️ [Download Build](https://drive.google.com/drive/folders/1JYLy-8yQQtKGHU8syXW8pfBpDEwub8Rj?usp=sharing)
+
+
+
+### Uncompressed File Size: ~587 MB
