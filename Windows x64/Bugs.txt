@@ -1,12 +1,28 @@
-Instructions page - no exit button
+BUGS: ------------------------------------------------
 
-Title text a bit misaligned
+Game Display / Resolution Problem 
 
-Music overlap
+Clicking Through Multiple items
 
-Beer
+Text Popup Overlap
+
+Powerup Overlap
 
 
-Improvements:
+Close button for scdi doesn't work
+
+
+
+IMPROVEMENTS: ----------------------------------------
+
+Floating Buildings
+
+Lag interacting w/ horse statue
 
 Sky Transition
+
+
+
+CODING IMPROVEMENTS: --------------------------------
+
+Needs more documentation
