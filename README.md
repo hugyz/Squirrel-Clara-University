@@ -14,6 +14,6 @@ Build is hosted here:
 
 ➡️ [Download Build](https://drive.google.com/drive/folders/1JYLy-8yQQtKGHU8syXW8pfBpDEwub8Rj?usp=sharing)
 
-
+⚠️ Do not move or remove any files from the downloaded folder — the game executable (.exe) will not run properly without them.
 
 ### Uncompressed File Size: ~587 MB
