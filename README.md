@@ -15,10 +15,24 @@ To play the game, download the pre-built version using the link below.
 
 ## 🎮 Download & Installation
 
+> 🔒 **Note:** You must be signed into a Santa Clara University (SCU) account to access the download link.
+
 ➡️ **[Download Game Build (Windows/Mac)](https://drive.google.com/drive/folders/1JYLy-8yQQtKGHU8syXW8pfBpDEwub8Rj?usp=sharing)**
 📦 **Uncompressed File Size:** \~587 MB
 
+### 🪟 Windows
+
+* The Windows version is an `.exe` file located in the `Windows x64` folder.
+* Double-click the `Squirrel Clara University 1.0.exe` to launch.
+
 > ⚠️ Do **not** remove or move any files from the downloaded folder. The executable (`Squirrel Clara University 1.0.exe`) depends on all accompanying files to run properly.
+
+### 🍎 macOS
+
+* The macOS version is a `.app` file.
+* You can directly click the `.app` to launch the game.
+
+> ⚠️ If you double-click the app and macOS gives an error saying it cannot open the file because it can't verify the developer, open it in Finder, right-click, then select **Open**. macOS will allow it to launch on the second try.
 
 ---
 
@@ -94,10 +108,10 @@ Use the backtick (\`) key to teleport to an invisible tower with a full campus v
 
 Time of day changes every \~40 seconds, cycling through:
 
-  * 3 sunrise backgrounds
-  * 4 daytime backgrounds
-  * 2 sunset backgrounds
-  * 3 night backgrounds
+* 3 sunrise backgrounds
+* 4 daytime backgrounds
+* 2 sunset backgrounds
+* 3 night backgrounds
 
 ![Sunrise](readme_images/sunrise.png)
 ![Day](readme_images/day.png)
