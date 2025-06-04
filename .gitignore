@@ -1,3 +1,6 @@
+# Ignore Unity streaming asset files
 *.resS
+
+# Track _Mac/ folder but ignore its contents, except the .keep file
 _Mac/*
 !_Mac/.keep
