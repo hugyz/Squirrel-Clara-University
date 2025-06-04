@@ -1,1 +1,3 @@
 *.resS
+_Mac/*
+!_Mac/.keep

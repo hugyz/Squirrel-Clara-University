@@ -9,6 +9,7 @@
 ## 📂 GitHub Source
 
 This repository contains all Unity source code and assets for the project.
+
 To play the game, download the pre-built version using the link below.
 
 ---
@@ -22,6 +23,7 @@ To play the game, download the pre-built version using the link below.
 
 ### 🪟 Windows
 
+* Unzip the downloaded folder before launching the game.
 * The Windows version is an `.exe` file located in the `Windows x64` folder.
 * Double-click the `Squirrel Clara University 1.0.exe` to launch.
 
@@ -29,6 +31,10 @@ To play the game, download the pre-built version using the link below.
 
 ### 🍎 macOS
 
+* Unzip the downloaded folder before launching the game.
+* The macOS version is a `.app` file.
+* You can directly click the `.app` to launch the game.
+* The `.app` file is a self-contained application bundle — it does **not** expose any source code or assets, similar to a `.exe` on Windows.
 * The macOS version is a `.app` file.
 * You can directly click the `.app` to launch the game.
 
@@ -42,7 +48,26 @@ To play the game, download the pre-built version using the link below.
 * Input: Best played with a mouse
 
 ---
+|
 
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+
+---
 ## 🕹️ Controls & Gameplay
 
 * **Movement:** `W`, `A`, `S`, `D`
