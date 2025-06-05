@@ -9,7 +9,6 @@
 ## 📂 GitHub Source
 
 This repository contains all Unity source code and assets for the project.
-
 To play the game, download the pre-built version using the link below.
 
 ---
@@ -47,27 +46,20 @@ To play the game, download the pre-built version using the link below.
 * Recommended: Computer with a dedicated GPU
 * Input: Best played with a mouse
 
----
-|
+### Trackpad Tips
 
-|
+If using a trackpad:
 
-|
+* Use a **small area** of the trackpad for better precision
 
-|
+* Keep your finger **lightly lifted and gliding** on the same spot instead of lifting and repositioning repeatedly
 
-|
-
-|
-
-|
-
-|
-
-|
-
+* Make **small circular movements** to control the camera smoothly
 
 ---
+---
+---
+
 ## 🕹️ Controls & Gameplay
 
 * **Movement:** `W`, `A`, `S`, `D`
@@ -143,6 +135,12 @@ Time of day changes every \~40 seconds, cycling through:
 ![Cloudy Day](readme_images/cloudy.png)
 ![Sunset](readme_images/sunset.png)
 ![Night](readme_images/night.png)
+
+---
+
+## 🐞 Known Issues
+
+For a list of known bugs or issues that may occur during gameplay, please refer to [Bugs.txt](./Bugs.txt)
 
 ---
 
