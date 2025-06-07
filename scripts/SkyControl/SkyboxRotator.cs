@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class SkyboxPhaseTransition : MonoBehaviour
 {
@@ -17,9 +19,20 @@ public class SkyboxPhaseTransition : MonoBehaviour
     private Phase[] phaseCycle = { Phase.Dawn, Phase.Day, Phase.Sunset, Phase.Night };
     private int currentPhaseIndex = 0;
 
+    private Dictionary<Phase, Queue<Material>> phaseSkyboxQueue = new Dictionary<Phase, Queue<Material>>();
+
+    void Awake()
+    {
+        // Shuffle and initialize each skybox queue
+        phaseSkyboxQueue[Phase.Dawn] = ShuffleQueue(dawnSkyboxes);
+        phaseSkyboxQueue[Phase.Day] = ShuffleQueue(sunnyDaySkyboxes.Concat(new Material[] { cloudyDaySkybox }).ToArray());
+        phaseSkyboxQueue[Phase.Sunset] = ShuffleQueue(sunsetSkyboxes);
+        phaseSkyboxQueue[Phase.Night] = ShuffleQueue(nightSkyboxes);
+    }
+
     void Start()
     {
-        RenderSettings.skybox = GetRandomSkybox(phaseCycle[currentPhaseIndex]);
+        RenderSettings.skybox = GetNextSkybox(phaseCycle[currentPhaseIndex]);
         StartCoroutine(CycleSkyboxes());
     }
 
@@ -31,7 +44,7 @@ public class SkyboxPhaseTransition : MonoBehaviour
 
             int nextIndex = (currentPhaseIndex + 1) % phaseCycle.Length;
             Phase nextPhase = phaseCycle[nextIndex];
-            Material nextSkybox = GetRandomSkybox(nextPhase);
+            Material nextSkybox = GetNextSkybox(nextPhase);
 
             yield return StartCoroutine(BlendSkybox(RenderSettings.skybox, nextSkybox, transitionTime));
 
@@ -42,26 +55,36 @@ public class SkyboxPhaseTransition : MonoBehaviour
         }
     }
 
-    Material GetRandomSkybox(Phase phase)
+    Material GetNextSkybox(Phase phase)
     {
-        switch (phase)
+        if (phaseSkyboxQueue[phase].Count == 0)
         {
-            case Phase.Dawn:
-                return dawnSkyboxes[Random.Range(0, dawnSkyboxes.Length)];
-
-            case Phase.Day:
-                bool isSunny = Random.value <= 0.75f;
-                return isSunny ? sunnyDaySkyboxes[Random.Range(0, sunnyDaySkyboxes.Length)] : cloudyDaySkybox;
-
-            case Phase.Sunset:
-                return sunsetSkyboxes[Random.Range(0, sunsetSkyboxes.Length)];
-
-            case Phase.Night:
-                return nightSkyboxes[Random.Range(0, nightSkyboxes.Length)];
-
-            default:
-                return null;
+            Material[] refill = null;
+            switch (phase)
+            {
+                case Phase.Dawn:
+                    refill = dawnSkyboxes;
+                    break;
+                case Phase.Day:
+                    refill = sunnyDaySkyboxes.Concat(new Material[] { cloudyDaySkybox }).ToArray();
+                    break;
+                case Phase.Sunset:
+                    refill = sunsetSkyboxes;
+                    break;
+                case Phase.Night:
+                    refill = nightSkyboxes;
+                    break;
+            }
+            phaseSkyboxQueue[phase] = ShuffleQueue(refill);
         }
+
+        return phaseSkyboxQueue[phase].Dequeue();
+    }
+
+    Queue<Material> ShuffleQueue(Material[] materials)
+    {
+        Material[] shuffled = materials.OrderBy(x => Random.value).ToArray();
+        return new Queue<Material>(shuffled);
     }
 
     IEnumerator BlendSkybox(Material from, Material to, float duration)
