@@ -24,6 +24,7 @@ To play the game, download the pre-built version using the link below.
 
 * Unzip the downloaded folder before launching the game.
 * The Windows version is an `.exe` file located in the `Windows x64` folder.
+
 * Double-click the `Squirrel Clara University 1.0.exe` to launch.
 
 > ⚠️ Do **not** remove or move any files from the downloaded folder. The executable (`Squirrel Clara University 1.0.exe`) depends on all accompanying files to run properly.
@@ -33,9 +34,8 @@ To play the game, download the pre-built version using the link below.
 * Unzip the downloaded folder before launching the game.
 * The macOS version is a `.app` file.
 * You can directly click the `.app` to launch the game.
-* The `.app` file is a self-contained application bundle — it does **not** expose any source code or assets, similar to a `.exe` on Windows.
-* The macOS version is a `.app` file.
-* You can directly click the `.app` to launch the game.
+
+> The `.app` file is a self-contained application bundle — it does **not** expose any source code or assets, similar to a `.exe` on Windows.
 
 > ⚠️ If you double-click the app and macOS gives an error saying it cannot open the file because it can't verify the developer, open it in Finder, right-click, then select **Open**. macOS will allow it to launch on the second try.
 
